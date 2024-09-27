@@ -69,3 +69,11 @@ class LoginSerializer(serializers.Serializer):
         }
 
         return tokens
+
+
+class UsersSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ['id', 'first_name', 'middle_name', 'last_name', 'username', 'email', 'business_name', 'phone_number', 'created_at']
+
+        read_only_fields = ['id', 'created_at']
