@@ -19,3 +19,17 @@ def send_email_verification(email:str, first_name:str, link:str):
             },
         }
     )
+
+def password_reset_mail(first_name:str, email:str, link:str):
+    client.send_message(
+        message={
+            "to": {
+            "email": email,
+            },
+            "template": os.getenv('PASSWORD_RESET_MAIL_TEMPLATE_ID'),
+            "data": {
+            "firstName": first_name,
+            "link": link,
+            },
+        }
+    )
