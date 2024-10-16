@@ -182,9 +182,9 @@ def password_reset(request):
                 }, status=status.HTTP_400_BAD_REQUEST
             )
 
-@api_view(['PATCH'])
+@api_view(['PUT', 'PATCH'])
 def password_reset_confirm(request):
-    if request.method == 'POST':
+    if request.method == 'PUT' or request.method == 'PATCH':
         uid = request.data.get('uid')
         token = request.data.get('token')
         password = request.data.get('password')
