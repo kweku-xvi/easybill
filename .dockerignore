@@ -1,0 +1,72 @@
+# Virtual Environment
+venv/
+.venv/
+pythonenv*/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django specific
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Static and Media files (if not using volumes)
+staticfiles/
+mediafiles/
+
+# Development and IDE files
+.git/
+.gitignore
+README.md
+*.md
+
+# Environment files (be careful with this)
+.env
+*.env
+
+# Dependency directories
+node_modules/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IDE-specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Backup files
+*.bak
+*.gho
+*.ori
+*.orig
+*.tmp
+
+# Pytest
+.pytest_cache/
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
